@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Value Investing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+        
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        article {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        article h2 {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        article p {
+            font-weight: 300;
+            color: #e0e0e0;
+        }
+
+        article img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .chart {
+            width: 100%;
+            height: 400px;
+            background-color: #333;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Value Investing</h1>
+    </header>
+    <main>
+        <article>
+            <h2>What is Value Investing?</h2>
+            <p>
+                Value investing is like shopping for bargains, but instead of clothes or gadgets, you're looking for stocks. Imagine your favorite video game goes on sale at a huge discount. You know it's worth more than the sale price, so you grab it. Value investing works the same way. Investors look for stocks they believe are undervalued by the market.
+            </p>
+
+            <h2>Why Value Investing?</h2>
+            <p>
+                Value investing is popular because it can provide substantial returns with relatively lower risk. It's based on the idea that the market overreacts to good and bad news, causing stock prices to fluctuate more than they should. Value investors aim to capitalize on these fluctuations.
+            </p>
+
+            <h2>Key Concepts</h2>
+            <h3>Intrinsic Value</h3>
+            <p>
+                Intrinsic value is the true worth of a company, determined by its fundamentals like earnings, dividends, and growth prospects. Think of it like the actual value of that video game, regardless of the sale price.
+            </p>
+            <div class="chart" id="chart1"></div>
+
+            <h3>Margin of Safety</h3>
+            <p>
+                The margin of safety is like a safety net. It's the difference between a stock's market price and its intrinsic value. The larger the margin, the less risk you're taking. Imagine buying that game at a huge discount, knowing you could sell it for much more if needed.
+            </p>
+            <div class="chart" id="chart2"></div>
+
+            <h2>How to Identify Value Stocks</h2>
+            <h3>Price-to-Earnings (P/E) Ratio</h3>
+            <p>
+                The P/E ratio compares a company's current share price to its per-share earnings. A low P/E ratio might indicate a stock is undervalued. It's like seeing a game on sale for $20 when it usually sells for $40.
+            </p>
+            <img src="https://example.com/pe-ratio-example.png" alt="P/E Ratio Example">
+
+            <h3>Price-to-Book (P/B) Ratio</h3>
+            <p>
+                The P/B ratio compares a company's market value to its book value. A low P/B ratio can suggest a stock is undervalued. Imagine buying a book for $5 that has $10 worth of content.
+            </p>
+            <img src="https://example.com/pb-ratio-example.png" alt="P/B Ratio Example">
+
+            <h2>Famous Value Investors</h2>
+            <p>
+                Warren Buffett is perhaps the most famous value investor. He looks for companies with strong fundamentals that are undervalued by the market. His philosophy is to buy quality stocks at discounted prices and hold them for the long term.
+            </p>
+
+            <h2>Conclusion</h2>
+            <p>
+                Value investing is about finding bargains in the stock market. By understanding a company's intrinsic value and ensuring a margin of safety, you can make informed investment decisions. Remember, it's not just about buying cheap stocks, but finding high-quality companies at low prices.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sriram. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx1 = document.getElementById('chart1').getContext('2d');
+        const chart1 = new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Intrinsic Value vs Market Price',
+                    data: [50, 55, 60, 58, 65, 70],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#e0e0e0'
+                        },
+                        grid: {
+                            color: '#333'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#e0e0e0'
+                        },
+                        grid: {
+                            color: '#333'
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('chart2').getContext('2d');
+        const chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Stock A', 'Stock B', 'Stock C', 'Stock D'],
+                datasets: [{
+                    label: 'Margin of Safety',
+                    data: [10, 15, 5, 20],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#e0e0e0'
+                        },
+                        grid: {
+                            color: '#333'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#e0e0e0'
+                        },
+                        grid: {
+                            color: '#333'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
